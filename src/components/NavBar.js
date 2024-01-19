@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from "../assets/logo.png";
 import styles from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
@@ -9,7 +9,7 @@ const NavBar = () => {
     <Navbar className={styles.NavBar} expand="md" fixed="top">
       <Container>
         <NavLink to="/">
-          <Navbar.Brand href="#home">
+          <Navbar.Brand>
             <img src={logo} alt="logo" height="45" />
           </Navbar.Brand>
         </NavLink>
@@ -22,21 +22,21 @@ const NavBar = () => {
               activeClassName={styles.Active}
               to="/"
             >
-              <i className="fas fa-home mr-2"></i>Home
+              <i className="fas fa-home"></i>Home
             </NavLink>
             <NavLink
               className={styles.NavLink}
               activeClassName={styles.Active}
               to="/signin"
             >
-              <i className="fas fa-sign-in mr-2"></i>Sign in
+              <i className="fas fa-sign-in-alt"></i>Sign in
             </NavLink>
             <NavLink
+              to="/signup"
               className={styles.NavLink}
               activeClassName={styles.Active}
-              to="/signup"
             >
-              <i className="fas fa-user-plus mr-2"></i>Sign up
+              <i className="fas fa-user-plus"></i>Sign up
             </NavLink>
           </Nav>
         </Navbar.Collapse>
